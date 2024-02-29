@@ -4,3 +4,10 @@
 	<label for="filter">Name filter:</label>
 	<input type="text" id="filter" placeholder="Enter name filter here..." [formControl] = "nameFilter">
 </form>
+
+<!-- {{input$ | async}} -->
+<ul *ngIf="input$">
+	<li *ngFor="let item of input$ | async">
+		{{item}}
+	</li>
+</ul>
