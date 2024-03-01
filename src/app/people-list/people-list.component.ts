@@ -25,6 +25,3 @@ export class PeopleListComponent implements OnInit {
   )
 
 }
-
-
-4713
