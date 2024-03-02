@@ -21,7 +21,7 @@ export class PeopleListComponent implements OnInit {
   public input$ = this.nameFilter.valueChanges.pipe(
     debounceTime(1000),
     distinctUntilChanged(),
-    switchMap(name => this.trippin.getPeople(name ?? '')),
+    // switchMap(name => this.trippin.getPeople(name ?? '')),
   )
 
 }
