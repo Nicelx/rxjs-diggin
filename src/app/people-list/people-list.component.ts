@@ -1,5 +1,5 @@
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs';
 import { TrippinService } from '../trippin.service';
@@ -11,7 +11,7 @@ import { TrippinService } from '../trippin.service';
   styleUrls: ['./people-list.component.scss'],
   imports: [CommonModule, ReactiveFormsModule],
 })
-export class PeopleListComponent implements OnInit {
+export class PeopleListComponent {
   constructor(private trippin: TrippinService) { }
   
   ngOnInit(): void {
