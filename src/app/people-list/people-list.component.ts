@@ -1,8 +1,8 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TrippinService } from '../trippin.service';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs';
-import { TrippinService } from '../trippin.service';
 
 @Component({
   standalone: true,
@@ -12,16 +12,17 @@ import { TrippinService } from '../trippin.service';
   imports: [CommonModule, ReactiveFormsModule],
 })
 export class PeopleListComponent {
-  constructor(private trippin: TrippinService) { }
   
   ngOnInit(): void {
   }
   public nameFilter = new FormControl('');
-
+  
   public input$ = this.nameFilter.valueChanges.pipe(
     debounceTime(1000),
     distinctUntilChanged(),
-    // switchMap(name => this.trippin.getPeople(name ?? '')),
-  )
-
+    switchMap(name => this.trippin.getPeople(name ?? '')),
+    )
+    
+    constructor(private trippin: TrippinService) { }
 }
+// npm i --save-dev @types/tslib
