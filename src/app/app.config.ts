@@ -9,7 +9,9 @@ export const TRIPPIN_BASE_URL = new InjectionToken<string>('TRIPPIN_BASE_URL');
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withComponentInputBinding()),
-    { provide: TRIPPIN_BASE_URL, useValue: 'https://services.odata.org/TripPinRESTierService/(S(m5bfpztyapemay4raovtk1wi))' },
-    // importProvidersFrom(HttpClientModule),
+    { provide: TRIPPIN_BASE_URL, useValue: 'https://services.odata.org/TripPinRESTierService/(S(gx5zqp5jewy1uxu1hxfmloba))' },
+    importProvidersFrom(HttpClientModule),
   ],
 };
+
+// S(gx5zqp5jewy1uxu1hxfmloba)

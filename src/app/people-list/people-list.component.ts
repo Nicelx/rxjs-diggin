@@ -20,7 +20,9 @@ export class PeopleListComponent {
   public input$ = this.nameFilter.valueChanges.pipe(
     debounceTime(1000),
     distinctUntilChanged(),
-    switchMap(name => this.trippin.getPeople(name ?? '')),
+    // switchMap(name => this.trippin.getPeople(name ?? '')),
+    switchMap(name => this.trippin.getPeople('john')),
+    tap(obs => {console.log(obs)})
     )
     
     constructor(private trippin: TrippinService) { }
