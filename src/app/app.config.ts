@@ -1,8 +1,8 @@
 import { ApplicationConfig, InjectionToken, importProvidersFrom } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { routes } from './app.routes';
-import { HttpClientModule } from '@angular/common/http';
 
 export const TRIPPIN_BASE_URL = new InjectionToken<string>('TRIPPIN_BASE_URL');
 
