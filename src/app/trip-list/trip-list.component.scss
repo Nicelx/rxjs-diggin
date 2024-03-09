@@ -1,0 +1,10 @@
+.result-grid {
+	grid-template-columns: repeat(7, 1fr);
+
+	.right {
+		text-align: right;
+	}
+	.center {
+		text-align: center;
+	}
+}

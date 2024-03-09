@@ -26,3 +26,22 @@ app-root {
 label {
 	margin-right: 8px;
 }
+
+.result-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	margin-top: 10px;
+  
+	div {
+	  padding: 10px;
+	}
+  
+	.header {
+	  font-weight: bold;
+	  display: contents;
+  
+	  div {
+		background-color: lightgray;
+	  }
+	}
+  }
