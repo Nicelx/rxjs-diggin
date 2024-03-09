@@ -8,3 +8,21 @@
 		text-align: center;
 	}
 }
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    label {
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    input {
+        margin-top: 3px;
+        max-width: 350px;
+    }
+}

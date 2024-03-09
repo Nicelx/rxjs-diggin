@@ -1,5 +1,24 @@
 <h2>Trip List for {{ userName }}</h2>
 
+<h3>Add Trip</h3>
+
+<form action="">
+    <label for="name">Name: </label>
+    <input id="name" type="text" placeholder="enter trip name">
+    <label for="budget">Budget: </label>
+    <input id="budget" type="number" placeholder="enter budget">
+    <label for="description">Description: </label>
+    <input id="description" type="text" placeholder="description">
+    <label for="tags">Tags: </label>
+    <input id="tags" type="text" placeholder="enter comma separated list of tags">
+    <label for="startsAt">starts At: </label>
+    <input id="startsAt" type="date" placeholder="">
+    <label for="endsAt">ends At: </label>
+    <input id="endsAt" type="date" placeholder="">
+</form>
+
+<h3>Trip List</h3>
+
 <ng-container *ngIf="{ trips: data$ | async } as vm">
 	<div *ngIf="vm.trips; else loading" class="result-grid">
 		<div class="header">
