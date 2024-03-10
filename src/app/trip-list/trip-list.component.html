@@ -2,19 +2,21 @@
 
 <h3>Add Trip</h3>
 
-<form action="">
+<form action="" [formGroup]="tripForm">
     <label for="name">Name: </label>
-    <input id="name" type="text" placeholder="enter trip name">
+    <input id="name" type="text" placeholder="enter trip name" formControlName="name">
     <label for="budget">Budget: </label>
-    <input id="budget" type="number" placeholder="enter budget">
+    <input id="budget" type="number" placeholder="enter budget" formControlName="budget">
     <label for="description">Description: </label>
-    <input id="description" type="text" placeholder="description">
+    <input id="description" type="text" placeholder="description" formControlName="description">
     <label for="tags">Tags: </label>
-    <input id="tags" type="text" placeholder="enter comma separated list of tags">
+    <input id="tags" type="text" placeholder="enter comma separated list of tags" formControlName="tags">
     <label for="startsAt">starts At: </label>
-    <input id="startsAt" type="date" placeholder="">
+    <input id="startsAt" type="date" placeholder="" formControlName="startsAt">
     <label for="endsAt">ends At: </label>
-    <input id="endsAt" type="date" placeholder="">
+    <input id="endsAt" type="date" placeholder="" formControlName="endsAt">
+    <div></div>
+    <button (click)="addTrip()" [disabled]="!tripForm.valid">Add Trip</button>
 </form>
 
 <h3>Trip List</h3>

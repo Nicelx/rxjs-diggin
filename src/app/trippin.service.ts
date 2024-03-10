@@ -39,4 +39,9 @@ export class TrippinService {
 		const url = `${this.baseUrl}/People('${userName}')/Trips`;
 		return this.httpClient.get<{ value: Trip[] }>(url, { params });
 	}
+
+    public addTrip(userName: string, trip: Trip) : Observable<Trip> {
+        const url = `${this.baseUrl}/People('${userName}')/Trips`;
+        return this.httpClient.post<Trip>(url, trip);
+    }
 }
